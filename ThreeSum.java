@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -9,8 +11,28 @@ import java.util.List;
  * of zero. Notice that the solution set must not contain duplicate triplets.
  */
 public class ThreeSum {
-    public List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSum(int[] nums) {
+        HashSet<Integer> elems = new HashSet<>();
+        List<List<Integer>> result = new ArrayList<>();
 
-        return null;
+        for (int n : nums) {
+            elems.add(n);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            elems.remove(nums[i]);
+            for (int j = i + 1; j < nums.length; j++) {
+                int triplet = -(nums[i] + nums[j]);
+                if (elems.contains(triplet)) {
+                    result.add(Arrays.asList(nums[i], nums[j], triplet));
+                }
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(threeSum(new int[] { -1, 0, 1, 2, -1, -4 }));
     }
 }
