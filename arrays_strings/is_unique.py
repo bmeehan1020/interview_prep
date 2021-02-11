@@ -15,10 +15,11 @@ def is_unique(str):
     #
     #
     #
+    return None
 
-    # Solutions
+# Solutions
 
-    # Pythonic = Sets: if length of set of string is same as length of string O(n)
-    # Pythonic = (char_set = [False] * 128) create array quickly, index using ord()
-    # bit vector = stored in single variable, obj = 28 bytes * 8 = 224 bits > 128 (ASCII)
-    # dict = key: char, val: freq
+# Pythonic = Sets: if length of set of string is same as length of string O(n)
+# Pythonic = (char_set = [False] * 128) create array quickly, index using ord()
+# bit vector = stored in single variable, obj = 28 bytes * 8 = 224 bits > 128 (ASCII)
+# dict = key: char, val: freq
