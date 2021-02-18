@@ -17,6 +17,5 @@ def return_kth_to_last(llist, k):
 
     return prev
 
-
 # no i, _ for unreffed loop var
 # if testing None, just use var as condition [if var:]
