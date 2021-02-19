@@ -15,3 +15,6 @@ class Stack:
         if self.items:
             return self.items[len(self.items) - 1]
         return None
+
+    def __len__(self):
+        return len(self.items)
