@@ -69,13 +69,22 @@ def isBSTRecur(node, low, high):
         return isBSTRecur(node.left, low, node.val) and isBSTRecur(node.right, node.val, high)
 
 
-valid_bst = generate_binary_tree([6, 3, 10, 1, 4, 8, 12])
-invalid_bst = generate_binary_tree([3, 1, 5, 2, 4, 6])
-single_bst = generate_binary_tree([1])
-empty_bst = generate_binary_tree([])
+def pre_order_print(node):
+    if node:
+        print(node.val)
+        pre_order_print(node.left)
+        pre_order_print(node.right)
 
-assert isBinarySearchTree(valid_bst) == True
-assert isBinarySearchTree(invalid_bst) == False
-assert isBinarySearchTree(single_bst) == True
-assert isBinarySearchTree(empty_bst) == True
-assert isBinarySearchTree(None) == True
+
+def in_order_print(node):
+    if node:
+        in_order_print(node.left)
+        print(node.val)
+        in_order_print(node.right)
+
+
+def post_order_print(node):
+    if node:
+        post_order_print(node.left)
+        post_order_print(node.right)
+        print(node.val)
