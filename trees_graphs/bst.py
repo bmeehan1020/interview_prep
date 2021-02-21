@@ -26,14 +26,6 @@ def generate_binary_tree(node_list):
     node_queue.append(root)
 
     while node_queue:
-        # take out parent,
-        # check input queue, make 1st into node, remove from input queue
-        # make parent's left child
-        # add to node queue
-        # check input, make 1st into node, remove from input queue
-        # make parent's right child
-        # add to node queue
-
         parent = node_queue.popleft()
         if input_queue:
             if input_queue[0]:
@@ -57,16 +49,15 @@ def isBinarySearchTree(root):
     if not root or not (root.left and root.right):
         return True
 
+    def isBSTRecur(node, low, high):
+        if not node:
+            return True
+        elif (low and node.val < low) or (high and node.val > high):
+            return False
+        else:
+            return isBSTRecur(node.left, low, node.val) and isBSTRecur(node.right, node.val, high)
+
     return isBSTRecur(root, None, None)
-
-
-def isBSTRecur(node, low, high):
-    if not node:
-        return True
-    elif (low and node.val < low) or (high and node.val > high):
-        return False
-    else:
-        return isBSTRecur(node.left, low, node.val) and isBSTRecur(node.right, node.val, high)
 
 
 def pre_order_print(node):
