@@ -33,3 +33,7 @@ assert single_elem.right == None
 
 # other solutions have [0, len - 1], test if high < low,
 # then recur on [low, mid -1] and [mid + 1, high]
+
+# floor integer division: x // y
+# 5 // 2 = 2
+# 5 / 2 = 2.5
