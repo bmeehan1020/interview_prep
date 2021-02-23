@@ -95,3 +95,11 @@ depth_first_search(g)
 for node in g.nodes:
     print(
         f"node {node.name} discovered {node.discovered} finished {node.finished}")
+
+
+def topological_sort(graph):
+    """
+    O(V + E)
+    linear ordering of vertices, given graph is acyclic
+    DFS but when each node finished, add to front of a linked list
+    """
