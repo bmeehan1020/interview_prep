@@ -1,0 +1,29 @@
+SOLVED? NO
+
+CTCI 6.1
+You have 20 pill bottles. 19 bottles have 1.0g pills, but one has pills
+that weigh 1.1g. Given a scale that provides an exact measurement, how
+do you find the heavy bottle? You can only use the scale once
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Place 1 pill from bottle 1, 2 from bottle 2 ...
+If all pills weighed 1.0g, expected scale weight would be 
+1+2+...+20 = (21)(20)/2 = 210g
+if bottle 13 heavier, adds an extra 0.1g*13=1.3g so weight would be 211.3g
+
+heavy bottle # = (weight - 210)/0.1
