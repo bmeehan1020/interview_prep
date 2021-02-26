@@ -1,0 +1,29 @@
+SOLVED? NO
+
+CTCI 6.3
+8x8 Chessboard, two diag opposite corners have been removed. Given 31 dominos,
+where a single domino covers 2 squares. Can you use 31 dominos to cover the entire board?
+Prove your answer - provide an example or show why it's impossible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8x8 = 64 - 2 = 62 / 2 = 31
+
+if chessboard, black and white.
+opposite corners are same color
+e.g. 32 black, 30 white
+every domino hits 1 black 1 white
+31 dominos would overlay 31 black and 31 white, but black = 32, white = 30 
+Impossible
